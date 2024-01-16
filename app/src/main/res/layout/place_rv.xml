@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="@dimen/_85sdp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_centerHorizontal="true"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
@@ -9,13 +12,12 @@
         android:layout_width="@dimen/_75sdp"
         android:layout_height="@dimen/_75sdp"
         app:cardCornerRadius="@dimen/_2sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_10sdp">
+        android:layout_marginTop="@dimen/_5sdp">
 
         <ImageView
             android:id="@+id/imagePlace"
-            android:layout_width="@dimen/_75sdp"
-            android:layout_height="@dimen/_75sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/place1"
             android:scaleType="centerCrop"/>
 
@@ -26,7 +28,6 @@
         android:layout_below="@+id/imageCard"
         android:layout_width="@dimen/_75sdp"
         android:layout_marginTop="@dimen/_2sdp"
-        android:layout_marginStart="@dimen/_10sdp"
         android:textSize="@dimen/_9ssp"
         android:text="Danu Ulun"
         android:fontFamily="@font/poppins"

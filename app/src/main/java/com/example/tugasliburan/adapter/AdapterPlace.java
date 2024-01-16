@@ -17,8 +17,8 @@ import java.util.ArrayList;
 public class AdapterPlace extends RecyclerView.Adapter<AdapterPlace.MyViewHolder> {
 
     Context context;
-    ArrayList<itemList> itemListArrayList;
-    public AdapterPlace(Context context, ArrayList<itemList> itemListArrayList) {
+    ArrayList<News> itemListArrayList;
+    public AdapterPlace(Context context, ArrayList<News> itemListArrayList) {
         this.context = context;
         this.itemListArrayList = itemListArrayList;
     }
@@ -34,6 +34,10 @@ public class AdapterPlace extends RecyclerView.Adapter<AdapterPlace.MyViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        News item = itemListArrayList.get(position);
+
+        holder.textView.setText(item.name);
+        holder.imageView.setImageResource(item.image);
 
     }
 

@@ -4,4 +4,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tempat">Tempat Yang Saya Kunjungi</string>
     <string name="makanan">Kuliner Yang Saya Kunjungi</string>
+    <string name="place1">"Danu Beratan"</string>
+    <string name="place2">"Bali Wake Park"</string>
+    <string name="place3">"Pantai Jimbaran"</string>
+    <string name="place4">"Uluwatu Temple"</string>
 </resources>

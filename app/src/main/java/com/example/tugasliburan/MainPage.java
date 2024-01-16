@@ -24,6 +24,8 @@ public class MainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_page);
 
+        replaceFragment(new HomeFragment());
+
         bottomNavigationView = findViewById(R.id.bottomNavView);
         frameLayout = findViewById(R.id.frameLayout);
 
@@ -37,15 +39,22 @@ public class MainPage extends AppCompatActivity {
                 } else {
                     loadFragment(new MyTrip(), false);
                 }
-                loadFragment(new HomeFragment(), true);
                 return true;
             }
         });
+        loadFragment(new HomeFragment(), true);
     }
+
+    private void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout, fragment);
+        fragmentTransaction.commit();
+    }
+
     private void loadFragment(Fragment fragment, boolean isAppInitialized){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
         if (isAppInitialized){
             fragmentTransaction.add(R.id.frameLayout, fragment);
         } else {
